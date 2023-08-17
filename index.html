@@ -28,12 +28,22 @@
     </div>
 
     <div class="rule-template" style="display:none">
-
-        FactName <select class="dropdown"><option>Operator</option></select> <input type="text" value="Value">
+        <select class="fact-dropdown">
+            <option value="fact1">Fact 1</option>
+            <option value="fact2">Fact 2</option>
+            <option value="fact3">Fact 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        <select class="operator-dropdown">
+            <option value="equals">equals</option>
+            <option value="not_equals">not equals</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" class="value-input" value="Value">
         <input type="button" value="remove" onclick="removeRule(this)" />
         <button class="drag-handler">↑↓</button>
-
     </div>
+
 
     <script>
         var drake = dragula({
